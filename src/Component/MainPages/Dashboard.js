@@ -14,6 +14,9 @@ import { CalendarCheckFill } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import { PieChart, Pie, Sector, Cell, Tooltip } from "recharts";
 
+// git add .
+// git commit -m "responsivness"
+// git push -u origin  paul-branch
 
 
 export class Dashboard extends Component {
