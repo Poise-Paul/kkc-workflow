@@ -1,0 +1,38 @@
+.below_team_container{
+    // position: relative;
+    // width: 100%;
+    // border-bottom: 100px solid $color--grey-2;
+
+    &_search-box{
+        position: absolute;
+        right: 10px;
+    }
+}
+.jobs_overdue_no{
+    background-color: red !important;
+    width: 50px !important;
+    height: 50px;
+}
+
+.add_staff_button{
+    position: relative;
+    bottom: 0.4em;
+    float: right;
+}
+.clients_icon{
+    border-right: 3px solid $color--primary;
+}
+
+.staff{
+    &_head{
+        height: 20% !important;
+    }
+    &_body{
+        height: 75% !important;
+        overflow: auto;
+    }
+}
+.staff_head_text{
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid $color--grey-2;
+}

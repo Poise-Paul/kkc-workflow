@@ -1,0 +1,16 @@
+.staff_account_creation_container{
+    width: 100%;
+    height: 100%;
+    &_addStaff_account{
+        height:30em;
+        border-right: 1px $color--grey-2 solid;
+    }
+    &_staff_disclaimer{
+        width: 70%;
+        border-top: 1px $color--grey-2 solid;
+    }
+}
+
+.createStaff_form{
+    margin-top: 1em !important;
+}

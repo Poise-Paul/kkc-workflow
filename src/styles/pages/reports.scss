@@ -1,0 +1,17 @@
+.reports_icon{
+    border-right: 3px solid $color--primary;
+}
+.report_holder{
+    width: 100%;
+    border-bottom: 1px $color--grey-2 solid;
+}
+
+.reports{
+    overflow: auto;
+    .reports_head{
+        height: 25% !important;
+    }
+    .reports_body{
+        height: 75% !important;
+    }
+}

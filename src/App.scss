@@ -1,0 +1,64 @@
+@import './styles/components/buttons.scss';
+@import './styles/components/variables.scss';
+@import './styles/pages/Splash.scss';
+@import './styles/pages/signIn.scss';
+@import './styles/pages/Dashboard.scss';
+@import './styles/pages/jobs.scss';
+@import './styles/pages/client.scss';
+@import './styles/pages/reports.scss';
+@import './styles/pages/addStaff.scss';
+@import './styles/pages/addToTeam.scss';
+@import './styles/pages/addToClient.scss';
+@import './styles/pages/addToJobs.scss';
+@import './styles/pages/calender.scss';
+
+.hero{
+    background: url('./images/Mask\ Group\ 2.png') no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.mainContainer{
+    width: 90vw;
+}
+
+.textContainer{
+    // background-color: black;
+    margin-top: 12%;
+
+    &_logo{
+        padding-top: 20px;
+    }
+
+    &_text-head{
+        font-size: 400%;
+        color: $color--primary;
+
+    }
+
+    &_text-primary{
+        font-size: 200%;
+        color: $grey-color-2;
+    }
+
+    &_button:hover{
+        background-color: $color--secondary !important;
+    }
+    &_button{
+        margin-top: 40px;
+        padding: 10px;
+        width: 300px;
+        height: 100%;
+        border: 2px solid $color--secondary !important;
+        border-radius: 50px !important;
+
+        &-text{
+            font-size: 150%;
+        }
+    }
+}
+
+.image-container{
+    margin-top: 2%;
+}
+

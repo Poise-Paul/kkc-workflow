@@ -1,0 +1,43 @@
+.client_icon{
+    border-right: 3px solid $color--primary;
+}
+
+.add_client{
+    float: right !important;
+   position: relative;
+    left: 65em;
+    top: 0em;
+
+}
+.upload-file{
+    width: 70%;
+}
+.client_table{
+    width: 100%;
+}
+
+.clients{
+   height: 100%;
+    &_head{
+        width: 100% ;
+        height: 25%;
+    }
+    &_body{
+        width: 100%;
+        height: 75%;
+        overflow-y: auto ;
+    }
+}
+.upload-file{
+    position: relative;
+    top: -1.5em;
+}
+.line{
+    position: relative;
+    top:-1em;
+}
+
+// .add_client{
+//     position: relative;
+//     right: 10rem;
+// }
