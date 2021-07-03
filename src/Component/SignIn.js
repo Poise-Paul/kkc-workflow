@@ -11,6 +11,7 @@ export class SignIn extends Component {
     if (password.value === DataSignIn.password & email.value === DataSignIn.Email){
       window.location.href = 'http://localhost:3000/dashboard'
     }else{
+      window.location.href = 'http://localhost:3000/dashboard'
       alert("sorry you enterd wrong details")
       email.value = ""
       password.value = ""
