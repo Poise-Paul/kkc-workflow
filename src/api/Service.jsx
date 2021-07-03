@@ -3,7 +3,8 @@ import axios from 'axios';
 
 
 //const baseUrl = "https://localhost:5001/"
- const baseUrl="https://www.minsurancer.net"
+ const baseUrl="http://localhost:8080/"
+
 
 
 export function request(method, body, url) {
