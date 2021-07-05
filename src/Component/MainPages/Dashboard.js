@@ -98,7 +98,7 @@ export class Dashboard extends Component {
                                    <div className="circle"> <span className="circle_inner_letter">K</span></div>
                                 <div className="admin pl-3">
                                 <h3 className="admin_head">Kehinde Kassim</h3>
-                                  <a href="#">Kehindekassim@gmail.com</a> 
+                                  <a href="/">Kehindekassim@gmail.com</a> 
                             <button className="btn btn-warning"> <span className="organ_admin text-white"> <strong>ORGANIZATION ADMIN</strong> </span> </button>
                               </div>
                                 </div>
