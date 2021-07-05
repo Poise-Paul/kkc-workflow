@@ -1,7 +1,17 @@
+body{
+    padding: 0;
+    margin: 0;
+}
 body::-webkit-scrollbar{
     display: none;
   }
 .main-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
     background-color: $color--background-grey;
 }
 
@@ -210,13 +220,13 @@ body::-webkit-scrollbar{
 
             &_counter_jobs{
                 color: $color--primary;
-                font-size: 150%;
+                font-size: 1em;
                 border-right: 2px solid $color--grey-2;
 
             }
             &_counter_hours{
                 color: $color--primary;
-                font-size: 150%;
+                font-size: 1em;
 
             }
     
@@ -304,8 +314,9 @@ body::-webkit-scrollbar{
         }
     }
     &_body{
-        width: 100%;
-        height: 80%;
+        // position: fixed;
+        width: 100% !important;
+        height: 80% !important;
         overflow: auto;
         padding: 0 !important;
         margin: 0 !important;
@@ -332,6 +343,7 @@ body::-webkit-scrollbar{
                     height: 100%;
                     border-radius: 1em;
                     background-color: #F2F5FA;
+                    overflow: auto;
 
                     &_head{
                         width: 100%;
@@ -353,12 +365,13 @@ body::-webkit-scrollbar{
                     height: 100%;
                     border-radius: 1em;
                     background-color: #F2F5FA;
+                    overflow: auto;
                 }
             }
         }
         &_2{
             height: 100%;
-            width: 33%;
+            width: 32%;
             overflow: auto;
 
             &_1{
@@ -367,12 +380,14 @@ body::-webkit-scrollbar{
                 height: 48%;
                 background-color: #F2F5FA;
                 border-radius: 1em;  
+                // overflow: auto;
 
                 &_pieChat{
                     position: absolute !important;
                     top: 45%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+                    // position: fixed !important;
                 }
             }
             &_2{
@@ -388,6 +403,7 @@ body::-webkit-scrollbar{
                     height: 100%;
                     border-radius: 1em;
                     background-color: #F2F5FA;
+                    overflow: auto;
                 }
                 
                 &_secondOne{
@@ -405,46 +421,37 @@ body::-webkit-scrollbar{
 
         }
         &_3{
-            width: 30.51%;
-            height: 100%;
-            &_first{
-                width: 100%;
-                height: 25%;
-                background-color: #F2F5FA;
-                border-radius: 1em;
-            }
-            &_second{
-                width: 100%;
-                height: 5%;
+            width: 31%;
+            height: 100%;  
             }
             &_third{
                 width: 100%;
                 height: 70%;
                 background-color: #F2F5FA;
                 border-radius: 1em;
-                overflow-y: scroll;
+                // overflow-y: scroll;
             }
 
-            &_third::-webkit-scrollbar{
-                width: 0.5em;
-            }
-            &_third::-webkit-scrollbar-track{
-                background: #f1f1f1;
-            }
-            &_third::-webkit-scrollbar-thumb{
-                border-radius: 1em;
-                background: $color--grey-2;
-            }
-            &_third::-webkit-scrollbar-hover{
-              background: $color--grey; 
-            }
-        }
+            // &_third::-webkit-scrollbar{
+            //     width: 0.5em;
+            // }
+            // &_third::-webkit-scrollbar-track{
+            //     background: #f1f1f1;
+            // }
+            // &_third::-webkit-scrollbar-thumb{
+            //     border-radius: 1em;
+            //     background: $color--grey-2;
+            // }
+            // &_third::-webkit-scrollbar-hover{
+            //   background: $color--grey; 
+            // }
+        
         &_4{
-            width: 0.5%;
+            width: 0.1%;
             height: 100%;
         }
         &_5{
-            width: 0.5%;
+            width: 0.1%;
             height: 100%;
         }
     }
@@ -466,7 +473,7 @@ body::-webkit-scrollbar{
     border-radius: 100%;
     border: 5px $color--grey-2 solid;
     background-color: $color--primary;
-    width: 9em !important;
+    width: 9.5em !important;
     height: 7em !important;
 
     &_inner_letter{
@@ -490,8 +497,8 @@ body::-webkit-scrollbar{
 // Jobs Styling
 .jobs_icon_container{
     position: relative;
-    width: 5rem;
-    height: 4rem;
+    width: 4rem;
+    height: 3.5rem;
     background-color: $color--primary;
 
     &_icon{
@@ -555,12 +562,13 @@ body::-webkit-scrollbar{
 // scrollbar -y
 .scroll{
     overflow-y: scroll;
+
 }
 .scroll::-webkit-scrollbar{
     width: 0.5em;
 }
 .scroll::-webkit-scrollbar-track{
-    background: #f1f1f1;
+    // background: #f1f1f1;
 }
 .scroll::-webkit-scrollbar-thumb{
     border-radius: 1em;

@@ -12,14 +12,23 @@
 @import './styles/pages/addToJobs.scss';
 @import './styles/pages/calender.scss';
 
+
+body{
+    // background-color: yellow !important;
+    // background-image: ;
+    padding: 0;
+    margin: 0;
+}
 .hero{
     background: url('./images/Mask\ Group\ 2.png') no-repeat;
     background-size: cover;
     height: 100vh;
+    overflow: auto;
 }
 
 .mainContainer{
     width: 90vw;
+    // height: 10vh;
 }
 
 .textContainer{
@@ -31,13 +40,13 @@
     }
 
     &_text-head{
-        font-size: 400%;
+        font-size: 2em;
         color: $color--primary;
 
     }
 
     &_text-primary{
-        font-size: 200%;
+        font-size: 1.5em;
         color: $grey-color-2;
     }
 
@@ -45,15 +54,15 @@
         background-color: $color--secondary !important;
     }
     &_button{
-        margin-top: 40px;
-        padding: 10px;
-        width: 300px;
+        margin-top: 1em;
+        padding: 1em;
+        width: 12em;
         height: 100%;
         border: 2px solid $color--secondary !important;
         border-radius: 50px !important;
 
         &-text{
-            font-size: 150%;
+            font-size: 1em;
         }
     }
 }

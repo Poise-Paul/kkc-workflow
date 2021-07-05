@@ -1,8 +1,10 @@
+
 import React, { Component } from "react";
 // import Data_Jobs from "./DATA/Data_Jobs";
 // import JobPagination from "./pagination/Job_Pagination";
 import { Speedometer } from "react-bootstrap-icons";
 import { BriefcaseFill } from "react-bootstrap-icons";
+import DataTime from "./MainPages/DATA/DataTime";
 import { PersonFill } from "react-bootstrap-icons";
 import { GraphUp } from "react-bootstrap-icons";
 import { PeopleFill } from "react-bootstrap-icons";
@@ -13,7 +15,183 @@ import { CalendarCheckFill } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 
 export class jobs extends Component {
+  state = {
+    months:[
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ],
+    days: []
+  }
+
+
+  componentDidMount (){
+      const date = new Date();
+
+      date.setDate(1);
+  
+      const monthDays = document.querySelector(".days");
+  
+      const lastDay = new Date(
+        date.getFullYear(),
+        date.getMonth() + 1,
+        0
+      ).getDate();
+  
+      const prevLastDay = new Date(
+        date.getFullYear(),
+        date.getMonth(),
+        0
+      ).getDate();
+  
+      const firstDayIndex = date.getDay();
+  
+      const lastDayIndex = new Date(
+        date.getFullYear(),
+        date.getMonth() + 1,
+        0
+      ).getDay();
+  
+      const nextDays = lastDayIndex;
+      // const nextDays = 7 - lastDayIndex - 1;
+  
+      document.querySelector(".h1").innerHTML = this.state.months[date.getMonth()];
+  
+      document.querySelector(".p").innerHTML = `${date.getMonth() + 1} / ${date.getFullYear()}`;
+  
+      let days = "";
+      let int = 0
+  
+      for (let x = firstDayIndex; x > 0; x--) {
+        days += `<div id="prev-date">${prevLastDay - x + 1}</div>`;
+      }
+  
+      for (let i = 1; i <= lastDay; i++) {
+        // const test = i < DataTime.length ? DataTime[i] : 2
+        if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()){
+          days += `<div id="today">${i}</div>`;
+        } else {
+          days += `<div id="hi">${i}</div>`;
+        }
+        // console.log(int)
+      }
+  
+      for (let j = 1; j <= nextDays; j++) {
+        days += `<div id="next-date">${j}</div>`;
+        monthDays.innerHTML = days;
+      }
+
+      const daysData = document.querySelectorAll("#hi")
+      const h1 = document.querySelector(".h1")
+      const p = document.querySelector(".p")
+      
+      
+      daysData.forEach(element => {
+        for (let i of DataTime){
+          for (let x of i.days){
+        if (h1.innerHTML === i.month && p.innerHTML === i.year && element.innerHTML === `${x}`){
+          element.classList.add("hi")
+          // console.log(x)
+        }
+      }
+      // console.log(i.month)
+    }
+      });
+
+    const renderCalendar = ()=> {
+      date.setDate(1);
+  
+      const monthDays = document.querySelector(".days");
+  
+      const lastDay = new Date(
+        date.getFullYear(),
+        date.getMonth() + 1,
+        0
+      ).getDate();
+  
+      const prevLastDay = new Date(
+        date.getFullYear(),
+        date.getMonth(),
+        0
+      ).getDate();
+  
+      const firstDayIndex = date.getDay();
+  
+      const lastDayIndex = new Date(
+        date.getFullYear(),
+        date.getMonth() + 1,
+        0
+      ).getDay();
+  
+      const nextDays = lastDayIndex;
+      // const nextDays = 7 - lastDayIndex - 1;
+  
+      document.querySelector(".h1").innerHTML = this.state.months[date.getMonth()];
+  
+      document.querySelector(".p").innerHTML = `${date.getMonth() +1} / ${date.getFullYear()}`;
+  
+      let days = "";
+      let int = 0
+  
+      for (let x = firstDayIndex; x > 0; x--) {
+        days += `<div id="prev-date">${prevLastDay - x + 1}</div>`;
+      }
+  
+      for (let i = 1; i <= lastDay; i++) {
+        // const test = i < DataTime.length ? DataTime[i] : 2
+        if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()){
+          days += `<div id="today">${i}</div>`;
+        } else {
+          days += `<div id="hi">${i}</div>`;
+        }
+        // console.log(int)
+      }
+  
+      for (let j = 1; j <= nextDays; j++) {
+        days += `<div id="next-date">${j}</div>`;
+        monthDays.innerHTML = days;
+      }
+
+      const daysData = document.querySelectorAll("#hi")
+      const h1 = document.querySelector(".h1")
+      const p = document.querySelector(".p")
+      
+      
+      daysData.forEach(element => {
+        for (let i of DataTime){
+          for (let x of i.days){
+        if (h1.innerHTML === i.month && p.innerHTML === i.year && element.innerHTML === `${x}`){
+          element.classList.add("hi")
+          // console.log(x)
+        }
+      }
+      // console.log(i.month)
+    }
+      });
+    }
+  
+    document.querySelector(".prev").addEventListener("click", () => {
+      date.setMonth(date.getMonth() - 1);
+      renderCalendar();
+    });
+  
+    document.querySelector(".next").addEventListener("click", () => {
+      date.setMonth(date.getMonth() + 1);
+      renderCalendar();
+    });
+  }
   render() {
+    const priv = "<"
+    const next = ">"
     return (
       <div className="main-container container-fluid">
         <div className="row">
@@ -58,7 +236,7 @@ export class jobs extends Component {
             </Link>
           </div>
           <div className="col-sm-11  dashboard_container_main p-0">
-            <div className="content-container my_background p-5 ml-0">
+            <div className="content-container p-5 ml-0">
               <div className="calender_box_head">
                   {/* Heading of Calender Box Head */}
                     <div className="content-container_main_dashboard-head mb-3">
@@ -91,10 +269,36 @@ export class jobs extends Component {
                           </div>
                         {/* Calender Intro Ends Here */}
               </div>
-             
-                  <div className="calender_box">
-
-                  </div>
+                  <div  className="calender_box">
+                    {/* <div className="container"> */}
+                      <div style={{display:"flex"}}>
+                      <div className="calendar">
+                        <div>
+                        <div class="weekdays">
+                          <div>Sun</div>
+                          <div>Mon</div>
+                          <div>Tue</div>
+                          <div>Wed</div>
+                          <div>Thu</div>
+                          <div>Fri</div>
+                          <div>Sat</div>
+                        </div>
+                        <div class="days"></div>
+                        </div>
+                      </div>
+                        <div style={{width: "100%", backgroundColor: "#007bff", borderLeft:"2px solid white"}}>
+                        <div className="month">
+                          <i className="fas fa-angle-left prev">{priv}</i>
+                          <div className="date">
+                            <h1 className="h1"></h1>
+                            <p className="p"></p>
+                          </div>
+                          <i class="fas fa-angle-right next">{next}</i>
+                          <div style={{width:"90%",height:"95%",backgroundColor:"whitesmoke", margin:"1em", padding:"20px", }}></div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
             </div>
         </div>
       </div>

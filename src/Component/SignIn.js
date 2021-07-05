@@ -34,19 +34,20 @@ export class SignIn extends Component {
                   bookkeeping, Payrolls & tax track recurring <br />
                   client work.
                 </p>
-
                 <div className="signIn_first_buttons d-flex">
-                  <Link to="/SignUp">
-                    <div className="signIn_first_buttons-links first-link pr-2">
-                      <a className="sign-links sl">Sign Up</a>
-                    </div>
-                  </Link>
-                  <Link to="./SignIn">
-                    <div className="signIn_first_buttons-links second-link">
-                      <a className="sign-links fl"> Sign In</a>
-                    </div>
-                  </Link>
-                </div>
+                                        <Link to='/signIn'>
+                                            <button className="btn btn-outline-primary mr-2">
+                                                Sign In
+                                            </button>
+                                        </Link>
+
+                                        <Link to='/SignUp'>
+                                            <button className="btn btn-outline-primary">
+                                                Sign Up
+                                            </button>
+                                        </Link>
+
+                                    </div>
               </div>
             </div>
           </div>
@@ -103,9 +104,8 @@ export class SignIn extends Component {
                     <div className="col-sm-6 second-half d-flex justify-content-end">
                       <button
                         className="btn btn-primary btn-sm signIn_second_button sign-button"
-                        type="submit"
-                      >
-                        <span className="signIn_second_mainButton-text">
+                        type="submit buttonload">
+                         <i class="fa fa-circle-o-notch fa-spin"></i><span className="signIn_second_mainButton-text">
                           Sign In
                         </span>
                       </button>
