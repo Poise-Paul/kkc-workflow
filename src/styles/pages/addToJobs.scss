@@ -1,78 +1,171 @@
+// .jobs_input_container{
+//     width: 100%;
+// }
+// .job_fill_in_1{
+//     border-right: $color--grey-2 1px solid;
+// }
+// .content_color{
+//     color: $color--primary;
+// }
+// .pad-right{
+//     margin-left: -12px;
+// }
+
+
+// // New Styles
+
+// .jobs_input_container {
+//     width: 100%;
+//   }
+//   .job_fill_in_1 {
+//     border-right: $color--grey-2 1px solid;
+//   }
+//   .content_color {
+//     color: $color--primary;
+//   }
+//   .pad-right {
+//     margin-left: -12px;
+//   }
+  
+//   // job_creation_first
+//   .job_creation {
+//     // background-color: grey;
+//     &_second {
+//       background-color: yellow;
+//       width: 60%;
+//       height: 100%;
+//     }
+//     &_first {
+//       background-color: blue;
+//       width: 40%;
+//       height: 100%;
+//     }
+//   }
+  
+//   .div {
+//     height: 100%;
+//   }
+  
+//   .jobs_fill{
+//       &_container{
+//           background-color: #F2F5FA ;
+//           height: 30rem;
+//           overflow-y: scroll;
+//       }
+//       &_container::-webkit-scrollbar{
+//           width: 0.5em;
+//       }
+//       &_container::-webkit-scrollbar-track{
+//           background: #f1f1f1;
+//       }
+//       &_container::-webkit-scrollbar-thumb{
+//           border-radius: 1em;
+//           background: $color--grey-2;
+//       }
+//       &_container::-webkit-scrollbar-thumb:hover{
+//           background: $color--grey;
+//       }
+//       &_container::-webkit-scrollbar-thumb:hover{
+//           background: $color--grey;
+//       }
+//   }
+  
+//   .task_text {
+//     position: relative;
+//     bottom: 0.2rem;
+//     top: 0;
+//   }
+
+//   .btn_create_task{
+//     position: absolute !important;
+//     top: 45%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     width: 50%;
+//   }
+
+//   .card{
+//     height: 10rem;
+//   }
+
+// //   End Of New styles
+
 .jobs_input_container{
-    width: 100%;
+  width: 100%;
 }
 .job_fill_in_1{
-    border-right: $color--grey-2 1px solid;
+  border-right: $color--grey-2 1px solid;
 }
 .content_color{
-    color: $color--primary;
+  color: $color--primary;
 }
 .pad-right{
-    margin-left: -12px;
+  margin-left: -12px;
 }
 
 
 // New Styles
 
 .jobs_input_container {
-    width: 100%;
-  }
-  .job_fill_in_1 {
-    border-right: $color--grey-2 1px solid;
-  }
-  .content_color {
-    color: $color--primary;
-  }
-  .pad-right {
-    margin-left: -12px;
-  }
-  
-  // job_creation_first
-  .job_creation {
-    // background-color: grey;
-    &_second {
-      background-color: yellow;
-      width: 60%;
-      height: 100%;
-    }
-    &_first {
-      background-color: blue;
-      width: 40%;
-      height: 100%;
-    }
-  }
-  
-  .div {
+  width: 100%;
+}
+.job_fill_in_1 {
+  border-right: $color--grey-2 1px solid;
+}
+.content_color {
+  color: $color--primary;
+}
+.pad-right {
+  margin-left: -12px;
+}
+
+// job_creation_first
+.job_creation {
+  // background-color: grey;
+  &_second {
+    background-color: yellow;
+    width: 60%;
     height: 100%;
   }
-  
-  .jobs_fill{
-      &_container{
-          background-color: #F2F5FA ;
-          height: 20rem;
-          overflow-y: scroll;
-      }
-      &_container::-webkit-scrollbar{
-          width: 0.5em;
-      }
-      &_container::-webkit-scrollbar-track{
-          background: #f1f1f1;
-      }
-      &_container::-webkit-scrollbar-thumb{
-          border-radius: 1em;
-          background: $color--grey-2;
-      }
-      &_container::-webkit-scrollbar-thumb:hover{
-          background: $color--grey;
-      }
-      &_container::-webkit-scrollbar-thumb:hover{
-          background: $color--grey;
-      }
+  &_first {
+    background-color: blue;
+    width: 40%;
+    height: 100%;
   }
-  
-  .task_text {
-    position: relative;
-    bottom: 0.2rem;
-  }
+}
+
+.div {
+  height: 100%;
+}
+
+.jobs_fill{
+    &_container{
+        background-color: #F2F5FA ;
+        height: 20rem;
+        overflow-y: scroll;
+    }
+    &_container::-webkit-scrollbar{
+        width: 0.5em;
+    }
+    &_container::-webkit-scrollbar-track{
+        background: #f1f1f1;
+    }
+    &_container::-webkit-scrollbar-thumb{
+        border-radius: 1em;
+        background: $color--grey-2;
+    }
+    &_container::-webkit-scrollbar-thumb:hover{
+        background: $color--grey;
+    }
+    &_container::-webkit-scrollbar-thumb:hover{
+        background: $color--grey;
+    }
+}
+
+.task_text {
+  position: relative;
+  // bottom: 0.1rem;
+}
 
 //   End Of New styles
+

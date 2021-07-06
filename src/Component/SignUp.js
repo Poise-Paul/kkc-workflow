@@ -22,7 +22,7 @@ function SignUp() {
                                 bookkeeping, Payrolls & tax track recurring <br />
                                 client work.
                                 </p>
-
+{/* 
                                 <div className="signIn_first_buttons d-flex">
                                     <Link to='/signIn'>
                                         <div className="signIn_first_buttons-links first-link pr-2" >
@@ -34,7 +34,23 @@ function SignUp() {
                                             <a className="sign-links sl"> Sign In</a>
                                         </div>
                                     </Link>
-                                </div>
+                                </div> */}
+
+                                    <div className="signIn_first_buttons d-flex">
+                                        <Link to='/signIn'>
+                                            <button className="btn btn-outline-primary mr-2">
+                                                Sign In
+                                            </button>
+                                        </Link>
+
+                                        <Link to='/SignUp'>
+                                            <button className="btn btn-outline-primary">
+                                                Sign Up
+                                            </button>
+                                        </Link>
+
+                                    </div>
+
                             </div>
                     </div>
                 </div>
