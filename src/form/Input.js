@@ -12,11 +12,12 @@ const Input = props => {
         value={props.value}
         onChange={props.onChange}
         placeholder={props.placeholder}
-        className={props.error ? 'error' : ''}
+        className={props.error ? 'error form-control' : ''}
       />
       {props.error && <div className="form__error">{props.error}</div>}
     </div>
   );
 }
+
 
 export default Input;
