@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Input from "../../form/Input";
 import useForm from "../../hooks/useForm";
 import validate from "../../utils/validate";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { connect } from "react-redux";
 import "../sign-in/sign-in.styles.scss";
 
@@ -65,7 +67,7 @@ export const SignIn = ({buttonloader,LoginUser}) => {
                 bookkeeping, Payrolls & tax track recurring <br />
                 client work.
               </p>
-
+              <ToastContainer />
               <div className="signIn_first_buttons d-flex">
                 <Link to="/SignUp">
                   <div className="signIn_first_buttons-links first-link pr-2">
