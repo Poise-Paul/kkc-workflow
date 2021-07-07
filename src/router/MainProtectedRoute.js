@@ -1,6 +1,5 @@
 import React from 'react'
 import { Route, Redirect } from 'react-router-dom'
-import MainLayoutComponent from '../components/pages/main/main-layout/MainLayoutComponent'
 
 const MainProtectedRoute = ({ component: Component, isHaveCompany: isHaveCompany, isAuthenticated: isAuthenticated, ...rest }) => {
 
@@ -10,9 +9,9 @@ const MainProtectedRoute = ({ component: Component, isHaveCompany: isHaveCompany
             if (!isAuthenticated) {
                 return (<Redirect to={{ pathname: "/user/login", state: { from: props.location } }} />)
             }
-                return (<MainLayoutComponent>
+                return (
                     <Component {...props} />
-                </MainLayoutComponent>)
+                )
         }} />
     )
 }
