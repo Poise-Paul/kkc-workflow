@@ -6,7 +6,7 @@ const MainProtectedRoute = ({ component: Component, isHaveCompany: isHaveCompany
     return (
 
         <Route {...rest} render={props => {
-            if (!isAuthenticated) {
+            if (isAuthenticated==undefined) {
                 return (<Redirect to={{ pathname: "/user/login", state: { from: props.location } }} />)
             }
                 return (

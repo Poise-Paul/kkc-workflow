@@ -29,10 +29,9 @@ export class App extends Component {
   //   .then(response => response.json())
   //   .then(data => this.setState({data:data}))
   // }
-
+   
   render() {
-    // const notify = () => {
-    //   toast.success('Account has been created')
+   
 
     return (
       <Router>
@@ -43,14 +42,14 @@ export class App extends Component {
             exact
             path="/"
             render={() =>
-              localStorage.getItem("access_token") != undefined ? (
+              localStorage.getItem("token") != undefined ? (
                 <Redirect to="/dashboard" />
               ) : (
                 <SignIn />
               )
             }
           />
-       <MainProtectedRoute isAuthenticated={this.isAuthenticated}  path='/dashboard' component={Dashboard} />
+       <MainProtectedRoute isAuthenticated={localStorage.getItem("token")}  path='/dashboard' component={Dashboard} />
           
           <Route path="/Home" exact component={Home} />
           <Route path="/SignUp" component={SignUp} />

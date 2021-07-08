@@ -19,7 +19,8 @@ export function request(method, body, url) {
     baseURL: baseUrl,
     headers: {
       'Accept': 'application/json',
-      'Authorization': `Bearer ${accessToken}`
+      'Authorization': `Bearer ${accessToken}`,
+      'Access-Control-Allow-Origin':'*',
     },
     data: body,
     validateStatus: function (status) {
