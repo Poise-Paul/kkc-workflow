@@ -5,12 +5,9 @@ import Home from "./Component/Home";
 import SignIn from "./Component/sign-in/SignIn";
 import Password from "./Component/Password";
 import resetPassword from "./Component/resetPassword";
-<<<<<<< HEAD
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "@fortawesome/fontawesome-free/js/all.js";
-=======
->>>>>>> 9ce6f82fe6c4bba69cee5a95ce53e6570a792d70
 import mainPassword from "./Component/mainPassword";
 import Dashboard from "./Component/MainPages/Dashboard";
 import jobs from "./Component/MainPages/jobs";
@@ -22,31 +19,16 @@ import addToClient from "./Component/MainPages/addToClient";
 import addToJobs from "./Component/MainPages/addToJobs";
 import calenderPage from "./Component/calenderPage";
 import MainProtectedRoute from "../src/router/MainProtectedRoute";
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { Calendar } from "react-bootstrap-icons";
 import Tutorial from "./Component/react-table/Tutorial";
 import TutorialsList from "./Component/react-table/TutorialsList";
 import AddTutorial from "./Component/react-table/AddTutorial";
-=======
-// import { toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css'
-import { Link } from "react-router-dom";
-import { Calendar } from "react-bootstrap-icons";
->>>>>>> 9ce6f82fe6c4bba69cee5a95ce53e6570a792d70
 
 // toast.configure()
 
 export class App extends Component {
-<<<<<<< HEAD
  
-=======
-  // componentDidMount() {
-  //   fetch('https://www.postman.com/collections/4f9ba38c3d6d99331bf8')
-  //   .then(response => response.json())
-  //   .then(data => this.setState({data:data}))
-  // }
->>>>>>> 9ce6f82fe6c4bba69cee5a95ce53e6570a792d70
    
   render() {
    
@@ -70,21 +52,14 @@ export class App extends Component {
        <MainProtectedRoute isAuthenticated={localStorage.getItem("token")}  path='/dashboard' component={Dashboard} />
           
           <Route path="/Home" exact component={Home} />
-<<<<<<< HEAD
           <Route path="/tutorials" exact component={TutorialsList} />
-=======
->>>>>>> 9ce6f82fe6c4bba69cee5a95ce53e6570a792d70
           <Route path="/SignUp" component={SignUp} />
           <Route path="/SignIn" component={SignIn} />
           <Route path="/Password" component={Password} />
           <Route path="/resetPassword" component={resetPassword} />
           <Route path="/mainPassword" component={mainPassword} />
-<<<<<<< HEAD
           <Route exact path="/add" component={AddTutorial} />
           <Route path="/tutorials/:id" component={Tutorial} />
-=======
-         
->>>>>>> 9ce6f82fe6c4bba69cee5a95ce53e6570a792d70
           <Route path="/jobs" component={jobs} />
           <Route path="/clients" component={clients} />
           <Route path="/reports" component={reports} />

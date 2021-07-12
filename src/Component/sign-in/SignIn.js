@@ -6,16 +6,11 @@ import validate from "../../utils/validate";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { connect } from "react-redux";
-import "../sign-in/sign-in.styles.scss";
-<<<<<<< HEAD
-=======
-// import { useForm } from "react-hook-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
+import "../sign-in/sign-in.styles.scss";
 
 const eye = <FontAwesomeIcon icon= {faEye} />;
->>>>>>> 9ce6f82fe6c4bba69cee5a95ce53e6570a792d70
-
 const initialState = {
   email: {
     value: "",
@@ -58,10 +53,6 @@ export const SignIn = ({buttonloader,LoginUser}) => {
     }
   };
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 9ce6f82fe6c4bba69cee5a95ce53e6570a792d70
   return (
     <div className="container-fluid main-sign">
       <div className="row">
@@ -80,13 +71,9 @@ export const SignIn = ({buttonloader,LoginUser}) => {
                 client work.
               </p>
               <ToastContainer />
-<<<<<<< HEAD
-              <div className="signIn_first_buttons d-flex">
-=======
 
 
               {/* <div className="signIn_first_buttons d-flex">
->>>>>>> 9ce6f82fe6c4bba69cee5a95ce53e6570a792d70
                 <Link to="/SignUp">
                   <div className="signIn_first_buttons-links first-link pr-2">
                     <a className="sign-links sl">Sign Up</a>
@@ -97,9 +84,6 @@ export const SignIn = ({buttonloader,LoginUser}) => {
                     <a className="sign-links fl"> Sign In</a>
                   </div>
                 </Link>
-<<<<<<< HEAD
-              </div>
-=======
               </div> */}
 
               <div className="sign_buttons">
@@ -115,7 +99,6 @@ export const SignIn = ({buttonloader,LoginUser}) => {
                 </Link>
               </div>
 
->>>>>>> 9ce6f82fe6c4bba69cee5a95ce53e6570a792d70
             </div>
           </div>
         </div>
@@ -135,38 +118,26 @@ export const SignIn = ({buttonloader,LoginUser}) => {
                   label="Email"
                   name="email"
                   id="email"
-<<<<<<< HEAD
-=======
                   placeholder="Enter email"
->>>>>>> 9ce6f82fe6c4bba69cee5a95ce53e6570a792d70
                   value={formData.email.value}
                   onChange={changeHandler}
                   error={errors.email}
                 />
-<<<<<<< HEAD
-=======
                 <div className="password_button">
 
->>>>>>> 9ce6f82fe6c4bba69cee5a95ce53e6570a792d70
                 <Input
                   type="password"
                   label="Password"
                   name="password"
                   id="password"
-<<<<<<< HEAD
-=======
                   placeholder="Password"
->>>>>>> 9ce6f82fe6c4bba69cee5a95ce53e6570a792d70
                   value={formData.password.value}
                   onChange={changeHandler}
                   error={errors.password}
                 />
-<<<<<<< HEAD
-=======
                 <i>{eye}</i>
                 </div>
            
->>>>>>> 9ce6f82fe6c4bba69cee5a95ce53e6570a792d70
               </div>
               <div className="container-fluid bottom-section">
                 <div className="row">
