@@ -286,16 +286,18 @@ export class jobs extends Component {
                         <div class="days"></div>
                         </div>
                       </div>
-                        <div style={{width: "100%", backgroundColor: "#007bff", borderLeft:"2px solid white"}}>
-                        <div className="month">
+                        <div style={{width: "100%", backgroundColor: "#007bff",position:"relative",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center", borderLeft:"2px solid white"}}>
+                        <div style={{position:"absolute",top:"0"}} className="month">
                           <i className="fas fa-angle-left prev">{priv}</i>
                           <div className="date">
                             <h1 className="h1"></h1>
                             <p className="p"></p>
                           </div>
                           <i class="fas fa-angle-right next">{next}</i>
-                          <div style={{width:"90%",height:"95%",backgroundColor:"whitesmoke", margin:"1em", padding:"20px", }}></div>
                         </div>
+                          <div style={{width:"90%",backgroundColor:"whitesmoke",padding:"20px", }}>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, in. Tempora a placeat eum, veritatis facere sint nobis adipisci, eaque mollitia officia at? Commodi atque quisquam ratione fugiat unde earum provident, esse sunt aliquam consectetur dolorem eum dolor eius consequuntur, sequi eveniet ullam. Alias ad a in dolorum, delectus iste fugit, porro nostrum ipsa soluta qui enim distinctio dolores? Animi officia unde repellat illo eius vitae! Ratione, quo. Temporibus, impedit?
+                          </div>
                         </div>
                       </div>
                     </div>

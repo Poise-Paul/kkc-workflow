@@ -1,7 +1,6 @@
 @import './styles/components/buttons.scss';
 @import './styles/components/variables.scss';
 @import './styles/pages/Splash.scss';
-@import './styles/pages/signIn.scss';
 @import './styles/pages/Dashboard.scss';
 @import './styles/pages/jobs.scss';
 @import './styles/pages/client.scss';
@@ -67,6 +66,20 @@ body{
     }
 }
 
+.list .action {
+    cursor: pointer;
+  }
+  
+  .submit-form {
+    max-width: 300px;
+    margin: auto;
+  }
+  
+  .edit-form {
+    max-width: 300px;
+    margin: auto;
+  }
+  
 .image-container{
     margin-top: 2%;
 }

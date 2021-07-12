@@ -4,7 +4,7 @@
 import React, { Component } from "react";
 import DataTeams from "./DATA/DataTeams";
 import DataDashboard, {PieChartValue} from "./DATA/DataDashboard";
-import { Envelope, EyeFill, Speedometer } from "react-bootstrap-icons";
+import { Envelope, EyeFill, EyeSlashFill, Speedometer } from "react-bootstrap-icons";
 import { BriefcaseFill } from "react-bootstrap-icons";
 import { PersonFill } from "react-bootstrap-icons";
 import { GraphUp } from "react-bootstrap-icons";
@@ -16,6 +16,7 @@ import { CalendarCheckFill } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import { PieChart, Pie, Sector, Cell, Tooltip } from "recharts";
 import {  XCircleFill } from "react-bootstrap-icons";
+import { useState } from "react";
 
 
 // git add .
@@ -25,13 +26,15 @@ import {  XCircleFill } from "react-bootstrap-icons";
 
 export class Dashboard extends Component {
   render() {
-
     const data01 = [
         {name: PieChartValue.Overdue, value: parseInt(PieChartValue.Overdue_Hours) },
         {name: PieChartValue.Due_Today, value: parseInt(PieChartValue.Due_Today_Hours) },
         {name: PieChartValue.Due_This_week, value: parseInt(PieChartValue.Due_This_week_Hours) },
         {name: PieChartValue.Due_Next_week, value: parseInt(PieChartValue.Due_Next_week_Hours) },
     ]
+
+    // const [time, setTime] = useState(Date());
+    //   // document.getElementById("time").innerHTML = d
 
     return (
       <div className="main-container container-fluid">
@@ -96,7 +99,7 @@ export class Dashboard extends Component {
                                 <div className="dashboard_body_1_1">
                                 <div className="initial_top_container pt-5 d-flex">
                                    <div className="circle"> <span className="circle_inner_letter">K</span></div>
-                                <div className="admin pl-3">
+                                <div className="admin" style={{paddingLeft:"1em"}}>
                                 <h3 className="admin_head">Kehinde Kassim</h3>
                                   <a href="/">Kehindekassim@gmail.com</a> 
                             <button className="btn btn-warning"> <span className="organ_admin text-white"> <strong>ORGANIZATION ADMIN</strong> </span> </button>
@@ -223,45 +226,40 @@ export class Dashboard extends Component {
 
                               </div>
                               < div className="dashboard_body_3 p-0 m-0">
-                              <div className="jobs_fill_container mb-3">
+                              <div className="jobs_fill_container h-100">
 
-                                <div className="card scroll mb-3 mt-1">
-                                  <div className="card-header">
-                                    Job Name
-                                    <div className="d-flex float-right">
+                                <div className="card scroll mb-2">
+                                  <div className="card-header d-flex" style={{position:"relative"}}>
+                                    Audit (Job Name)
+                                    <div className="float-left" style={{position:"absolute", right:"2em"}}>
                                     <a data-toggle="modal" data-target="#exampleModal">
-                                      <EyeFill color="#0275d8" size={25} className="/"/>
+                                      <EyeSlashFill color="grey" size={25} className="/" style={{marginRight:"1em"}}/>
                                     </a> 
-                                      <a href="/"><XCircleFill color="red" size={20} className="ml-3"/></a>
+                                      <a href="/"><XCircleFill color="red" size={20}/></a>
                                     </div>
                                   </div>
                                   <div className="card-body">
-                                    <h5 className="card-title">
-                                     No of Tasks under this current job
-                                    </h5>
-                                   <p>
-                                     Time the job was completed
-                                   </p>
+                                    <h6 className="card-title">
+                                          The main goal of this job is to create an Audit for out client (Description)
+                                    </h6>
+                                  <p></p>
                                   </div>
                                 </div>
                                 
-                                <div className="card scroll mb-3 mt-1">
-                                  <div className="card-header">
-                                    Job Name
-                                    <div className="d-flex float-right">
-                                  <a data-toggle="modal" data-target="#exampleModal">
-                                      <EyeFill color="#0275d8" size={25} className="/"/>
-                                    </a>  
-                                      <a href="/"><XCircleFill color="red" size={20} className="ml-3"/></a>
+                                <div className="card scroll mb-2">
+                                  <div className="card-header d-flex" style={{position:"relative"}}>
+                                    Audit (Job Name)
+                                    <div className="float-left" style={{position:"absolute", right:"2em"}}>
+                                    <a data-toggle="modal" data-target="#exampleModal">
+                                      <EyeSlashFill color="grey" size={25} className="/" style={{marginRight:"1em"}}/>
+                                    </a> 
+                                      <a href="/"><XCircleFill color="red" size={20}/></a>
                                     </div>
                                   </div>
                                   <div className="card-body">
-                                    <h5 className="card-title">
-                                      This is the Task Title
-                                    </h5>
-                                    <p className="card-text">
-                                      Description of the job will be here
-                                     </p>
+                                    <h6 className="card-title">
+                                          The main goal of this job is to create an Audit for out client (Description)
+                                    </h6>
                                   </div>
                                 </div>
 
@@ -272,12 +270,16 @@ export class Dashboard extends Component {
                                                     <div className="modal-content">
                                                       <div className="modal-header">
                                                         <h5 className="modal-title" id="exampleModalLabel">Job Name</h5>
-                                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                                        {/* <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                                           <span aria-hidden="true">&times;</span>
-                                                        </button>
+                                                        </button> */}
+
+                                                        <a className="close" data-dismiss="modal" aria-label="Close" href="/"><XCircleFill color="red" size={20}/></a>
+
                                                       </div>
                                                       <div className="modal-body">
                                                         <ul>
+                                                          <h6>List of staff Assigned</h6>
                                                           <li>Poise Paul</li>
                                                           <li>Adeola</li>
                                                           <li>Buma</li>
@@ -301,45 +303,43 @@ export class Dashboard extends Component {
                                 {/* Modal Ends Here for jobs being done today */}
 
 
-                                <div className="card scroll mb-3 mt-1">
-                                  <div className="card-header">
-                                    Staff Name
-                                    <div className="d-flex float-right">
+                                <div className="card scroll mb-2">
+                                  <div className="card-header d-flex" style={{position:"relative"}}>
+                                    Audit (Job Name)
+                                    <div className="float-left" style={{position:"absolute", right:"2em"}}>
                                     <a data-toggle="modal" data-target="#exampleModal">
-                                      <EyeFill color="#0275d8" size={25} className="/"/>
+                                      <EyeSlashFill color="grey" size={25} className="/" style={{marginRight:"1em"}}/>
                                     </a> 
-                                      <a href="/"><XCircleFill color="red" size={20} className="ml-3"/></a>
+                                      <a href="/"><XCircleFill color="red" size={20}/></a>
                                     </div>
                                   </div>
                                   <div className="card-body">
-                                    <h5 className="card-title">
-                                      This is the Task Title
-                                    </h5>
-                                    <p className="card-text">
-                                      Time for job shows here
-                                     </p>
+                                    <h6 className="card-title">
+                                          The main goal of this job is to create an Audit for out client (Description)
+                                    </h6>
+                                  <p></p>
+                                  </div>
+                                </div>
+                              
+
+                                <div className="card scroll mb-2">
+                                  <div className="card-header d-flex" style={{position:"relative"}}>
+                                    Audit (Job Name)
+                                    <div className="float-left" style={{position:"absolute", right:"2em"}}>
+                                    <a data-toggle="modal" data-target="#exampleModal">
+                                      <EyeSlashFill color="grey" size={25} className="/" style={{marginRight:"1em"}}/>
+                                    </a> 
+                                      <a href="/"><XCircleFill color="red" size={20}/></a>
+                                    </div>
+                                  </div>
+                                  <div className="card-body">
+                                    <h6 className="card-title">
+                                          The main goal of this job is to create an Audit for out client (Description)
+                                    </h6>
+                                  <p></p>
                                   </div>
                                 </div>
 
-                                <div className="card scroll mb-3 mt-1">
-                                  <div className="card-header">
-                                    Job Name
-                                    <div className="d-flex float-right">
-                                    <a data-toggle="modal" data-target="#exampleModal">
-                                      <EyeFill color="#0275d8" size={25} className="/"/>
-                                    </a> 
-                                      <a href="/"><XCircleFill color="red" size={20} className="ml-3"/></a>
-                                    </div>
-                                  </div>
-                                  <div className="card-body">
-                                    <h5 className="card-title">
-                                      This is the Task Title
-                                    </h5>
-                                    <p className="card-text">
-                                      Description of the job will be here
-                                     </p>
-                                  </div>
-                                </div>
                                 </div>
                               </div>
                       </div>

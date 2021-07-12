@@ -38,7 +38,7 @@ function SignUp() {
 
                                     <div className="signIn_first_buttons d-flex">
                                         <Link to='/signIn'>
-                                            <button className="btn btn-outline-primary mr-2">
+                                            <button className="btn btn-outline-primary" style={{marginRight:"0.5em"}}>
                                                 Sign In
                                             </button>
                                         </Link>

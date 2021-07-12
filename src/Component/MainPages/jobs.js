@@ -79,11 +79,14 @@ export class jobs extends Component {
             <div className="content-container ml-0">
 
             <div className="jobs container-fluid p-4">
-                    <div className="jobs_head container-fluid row d-flex">
-                      <h2 className="color jobs_head_text"> {" "} Jobs{" "} </h2>
-                      <div className="create_task_btn align-items-right">
+                    <div className="jobs_head container-fluid row" >
+                      <div className="head col">
+                          <h2 className="color jobs_head_text"> {" "} Jobs{" "} </h2>
+                      </div>
+                      
+                      <div className="create_task_btn col" style={{marginTop:"3em", marginLeft:"50em"}}>
                           <Link to="./addToJobs">
-                              <button className="btn btn-primary float-right"> Create Job+ </button>
+                              <button className="btn btn-primary "> Create Job+ </button>
                           </Link>
                       </div>
                     

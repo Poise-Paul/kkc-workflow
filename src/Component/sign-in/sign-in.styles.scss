@@ -1,4 +1,6 @@
 // Sign up style
+@import '../../styles/components/variables.scss';
+@import '../../styles/components/buttons.scss';
 body{
     padding: 0;
     margin: 0;
@@ -18,7 +20,15 @@ body{
     background-color: $color--add1;
     height: 100vh;
     
-    
+    // &_buttons-links{
+    //     width: 100px;
+    //     border: black solid 2px !important;
+    // }
+
+    // &_buttons-links:hover{
+    //     background-color: $color--secondary;
+    //     color: white;
+    // }
 
     &-content{
         margin-top: 20%;
@@ -144,7 +154,11 @@ body{
 }
 
 }
-
+.bottom-section{
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
 .main-sign_second{
     height: 100vh;
     overflow: auto;
@@ -171,3 +185,64 @@ body{
 
 // Password (Reset Password)
 
+
+.form {
+   
+    padding: 40px;
+  
+    &__group {
+      margin-bottom: 20px;
+  
+      label,
+      p {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+  
+      &--radio,
+      &--checkbox {
+  
+        label {
+          display: inline-flex;
+          align-items: center;
+          margin-right: 15px;
+  
+          span {
+            margin-left: 5px;
+          }
+        }
+      } 
+  
+      input[type="text"],
+      input[type="password"],
+      input[type="file"],
+      textarea,
+      select {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid gray;
+        outline: 0;
+        transition: box-shadow .3s ease;
+  
+        &:focus {
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+  
+        &.error {
+          border-color: red;
+        }
+      }
+    }
+  
+    &__error {
+      color: red;
+      font-size: 12px;
+      padding: 5px 0;
+      display: block;
+    }
+  }
+  
+ 

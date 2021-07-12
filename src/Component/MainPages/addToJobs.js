@@ -330,42 +330,7 @@ export class addToJobs extends Component {
                         </div>
 
                     </div>
-  
-                    <div
-                      class="modal fade show"
-                      id="myModal"
-                      tabindex="-1"
-                      role="dialog"
-                    >
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button
-                              type="button"
-                              class="close"
-                              data-dismiss="modal"
-                              aria-label="Close"
-                            >
-                        <a href="/"><XCircleFill color="red" size={20} className="ml-3"/></a>
-                            </button>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-link">
-                              Nice Button
-                            </button>
-                            <button
-                              type="button"
-                              class="btn btn-danger btn-link"
-                              data-dismiss="modal"
-                            >
-                              Close
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-  
+
                     <div
                       class="modal fade show"
                       id="loginModal"
@@ -377,17 +342,11 @@ export class addToJobs extends Component {
                           <div class="card card-signup card-plain">
                             <div class="modal-header w-100 container-fluid">
                               <div class="card-header card-header-primary text-center container-fluid w-100">
-                                <button
-                                  type="button"
-                                  class="close"
-                                  data-dismiss="modal"
-                                  aria-hidden="true"
-                                >
-                              <a href="/"><XCircleFill color="red" size={20} className="ml-3"/></a>
-                                </button>
-                                <h4 class="card-title">
-                                  Create a Task(s) for this job
-                                </h4>
+                                  <div className="d-flex text-center">
+                                      <h4 class="card-title mx-auto"> Create a Task(s) for this job </h4>
+                                    <a  type="button" class="close" data-dismiss="modal" aria-hidden="true" href="/"><XCircleFill color="red" size={20} className="ml-3" style={{marginLeft:"1em"}}/></a>
+                                  </div>
+
                               </div>
                             </div>
                             <div class="modal-body">
@@ -505,7 +464,7 @@ export class addToJobs extends Component {
                                               className="form-control date_outtt"
                                               id="usr"
                                               required
-                                              placeholder="Add client"
+                                              placeholder="Date Out"
                                               readOnly
                                               onChange={(e)=>this.task_date_out(e)}
                                             />
@@ -540,7 +499,7 @@ export class addToJobs extends Component {
               
             <div className="col-sm-5 div">
               {/* List of Tasks given would show will  */}
-              <div className="jobs_fill_container mb-3">
+              <div className="jobs_fill_container mb-3 h-75">
               <div style={{textAlign:"center", padding:"15px"}}>
                 <h4>{this.state.job_bool === true ?  this.state.job_name : "Jobe Name"}</h4>
                 <p>{`you currently have ${this.state.job_daa.length} task`}</p>
